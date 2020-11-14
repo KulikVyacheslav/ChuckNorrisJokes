@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getJoke, selectJoke, addJoke, deleteJoke, selectMyJokes, selectMyJokesById, deleteJokeById} from "../../ducks";
 import {Joke} from "../../components/Joke";
 import {JokesI, RootStateI} from "../../interfaces/interfaces";
+import {Button} from "../../UI/Button";
 
 interface JokesProps {
 
@@ -49,14 +50,14 @@ export const Jokes: React.FC<JokesProps> = () => {
     return (
         <div>
             <Joke />
-            <button onClick={() => dispatch(getJoke())}>Get new Joke</button>
+            <Button color="info" onClick={() => dispatch(getJoke())}>Get new Joke</Button>
             {toggleButtonTimer ?
-                <button onClick={handleStopGetJoke}>Stop Get Joke</button> :
-                <button onClick={handleStartGetJoke}>Get new Joke 3sec</button>
+                <Button onClick={handleStopGetJoke}>Stop Get Joke</Button> :
+                <Button color="info" onClick={handleStartGetJoke}>Get new Joke 3sec</Button>
             }
             {toggleButtonFavorite ?
-                <button onClick={handleFavorite}>Delete from Favorite</button> :
-                <button onClick={handleFavorite}>Add to Favorite</button>
+                <Button onClick={handleFavorite}>Delete from Favorite</Button> :
+                <Button color="secondary" onClick={handleFavorite}>Add to Favorite</Button>
             }
 
         </div>

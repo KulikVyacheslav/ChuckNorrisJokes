@@ -1,6 +1,7 @@
 import React, {ElementType} from "react";
 import {useDispatch} from "react-redux";
 import { deleteJokeById } from "../../ducks";
+import {Button} from "../../UI/Button";
 
 interface WrapperJokeProps {
     children: React.ReactNode,
@@ -18,7 +19,7 @@ export const WrapperJoke: React.FC<WrapperJokeProps> = ({children, idJoke}) => {
     return (
         <div>
             {children}
-            <button onClick={handleDeleteJoke}>Delete joke</button>
+            <Button onClick={handleDeleteJoke}>Delete joke</Button>
         </div>
     )
 };
