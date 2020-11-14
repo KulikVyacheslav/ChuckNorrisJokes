@@ -18,6 +18,9 @@ const myJokesSlice = createSlice({
                 const indJoke = state.findIndex( joke => joke.id === action.payload);
                 state.splice(indJoke,1);
             },
+            deleteAllJoke: (state) => {
+                state.splice(0);
+            },
         },
 
     }
@@ -26,6 +29,6 @@ const myJokesSlice = createSlice({
 export const selectMyJokes = (state: RootStateI) => state.myJokes
 export const selectMyJokesById = (state: RootStateI, jokeId: string) => state.myJokes.find(joke => joke.id === jokeId);
 
-export const {addJoke, deleteJoke, deleteJokeById} = myJokesSlice.actions;
+export const {addJoke, deleteJoke, deleteJokeById, deleteAllJoke} = myJokesSlice.actions;
 export const myJokesReducer = myJokesSlice.reducer;
 
