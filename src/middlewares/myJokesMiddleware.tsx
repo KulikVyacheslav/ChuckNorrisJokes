@@ -1,4 +1,4 @@
-import {nanoid, PayloadAction} from "@reduxjs/toolkit";
+import {PayloadAction} from "@reduxjs/toolkit";
 import { addJoke, deleteJokeById } from "../ducks";
 
 

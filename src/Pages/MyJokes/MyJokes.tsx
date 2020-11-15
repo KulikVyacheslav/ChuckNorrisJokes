@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {selectMyJokes, deleteAllJoke} from "../../ducks";
 import {WrapperJoke} from "../../components/WrapperJoke";
@@ -14,9 +14,9 @@ export const MyJokes: React.FC<MyJokesProps> = () => {
     const myJokes = useSelector(selectMyJokes);
     const dispatch = useDispatch();
 
-    const handleDeleteAll = ():void => {
+    const handleDeleteAll = useCallback(():void => {
         dispatch(deleteAllJoke());
-    }
+    }, [dispatch])
 
     return (
         <div className="container my-jokes">
