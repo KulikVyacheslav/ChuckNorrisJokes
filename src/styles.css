@@ -2,6 +2,14 @@
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+
 /*Reset style*/
 button, button:focus, button:hover  {
   -webkit-appearance: none;
@@ -11,4 +19,15 @@ button, button:focus, button:hover  {
   border-radius: 0;
   background: #ffffff;
   outline: none;
+}
+
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+}
+
+
+a:link, a:visited, a:active, a:hover {
+  text-decoration: none;
+  color: black;
 }

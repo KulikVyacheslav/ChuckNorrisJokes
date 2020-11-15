@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getJoke, selectJoke} from "../../ducks";
+import "./Joke.scss";
 
 interface JokeProps {
     
@@ -19,7 +20,7 @@ export const Joke: React.FC<JokeProps> = () => {
 
 
     
-    return (<div>
+    return (<div className="joke">
         <p>{joke.value}</p>
     </div>)
 }

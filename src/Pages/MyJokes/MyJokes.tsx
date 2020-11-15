@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {selectMyJokes, deleteAllJoke} from "../../ducks";
 import {WrapperJoke} from "../../components/WrapperJoke";
 import { Button } from "../../UI/Button";
+import  "./MyJokes.scss";
 
 interface MyJokesProps {
 
@@ -18,9 +19,14 @@ export const MyJokes: React.FC<MyJokesProps> = () => {
     }
 
     return (
-        <div>
-            {myJokes.map( joke => <WrapperJoke key={joke.id} idJoke={joke.id}><p>{joke.value}</p></WrapperJoke>  )}
-            <Button color="primary" onClick={handleDeleteAll}>Delete all Joke</Button>
+        <div className="container my-jokes">
+            <div className="my-jokes_delete my-jokes__mtb">
+                <Button color="primary" onClick={handleDeleteAll}>Delete all Joke</Button>
+            </div>
+            <div className="my-jokes_content">
+                {myJokes.map( joke => <WrapperJoke className="my-jokes_joke" key={joke.id} idJoke={joke.id}><p>{joke.value}</p></WrapperJoke>  )}
+            </div>
+
         </div>
     )
 }

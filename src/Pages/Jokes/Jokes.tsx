@@ -4,6 +4,7 @@ import {getJoke, selectJoke, addJoke, deleteJoke, selectMyJokes, selectMyJokesBy
 import {Joke} from "../../components/Joke";
 import {JokesI, RootStateI} from "../../interfaces/interfaces";
 import {Button} from "../../UI/Button";
+import "./Jokes.scss";
 
 interface JokesProps {
 
@@ -48,18 +49,19 @@ export const Jokes: React.FC<JokesProps> = () => {
 
     }
     return (
-        <div>
+        <div className="container jokes">
             <Joke />
-            <Button color="info" onClick={() => dispatch(getJoke())}>Get new Joke</Button>
-            {toggleButtonTimer ?
-                <Button onClick={handleStopGetJoke}>Stop Get Joke</Button> :
-                <Button color="info" onClick={handleStartGetJoke}>Get new Joke 3sec</Button>
-            }
-            {toggleButtonFavorite ?
-                <Button onClick={handleFavorite}>Delete from Favorite</Button> :
-                <Button color="secondary" onClick={handleFavorite}>Add to Favorite</Button>
-            }
-
+            <div className="jokes_button">
+                <Button color="info" onClick={() => dispatch(getJoke())}>Get new Joke</Button>
+                {toggleButtonTimer ?
+                    <Button onClick={handleStopGetJoke}>Stop Get Joke</Button> :
+                    <Button color="info" onClick={handleStartGetJoke}>Get new Joke 3sec</Button>
+                }
+                {toggleButtonFavorite ?
+                    <Button onClick={handleFavorite}>Delete from Favorite</Button> :
+                    <Button color="secondary" onClick={handleFavorite}>Add to Favorite</Button>
+                }
+            </div>
         </div>
     )
 }
