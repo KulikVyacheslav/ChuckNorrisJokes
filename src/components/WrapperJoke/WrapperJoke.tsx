@@ -1,13 +1,15 @@
 import React, {ElementType} from "react";
 import {useDispatch} from "react-redux";
 import { deleteJokeById } from "../../ducks";
+import {Button} from "../../UI/Button";
 
 interface WrapperJokeProps {
     children: React.ReactNode,
-    idJoke: string
+    idJoke: string,
+    className?: string
 }
 
-export const WrapperJoke: React.FC<WrapperJokeProps> = ({children, idJoke}) => {
+export const WrapperJoke: React.FC<WrapperJokeProps> = ({children, idJoke, className}) => {
 
     const dispatch = useDispatch();
 
@@ -16,9 +18,9 @@ export const WrapperJoke: React.FC<WrapperJokeProps> = ({children, idJoke}) => {
     }
 
     return (
-        <div>
+        <div className={className}>
             {children}
-            <button onClick={handleDeleteJoke}>Delete joke</button>
+            <Button onClick={handleDeleteJoke}>Delete joke</Button>
         </div>
     )
 };

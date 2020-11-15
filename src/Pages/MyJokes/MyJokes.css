@@ -1,0 +1,34 @@
+.my-jokes__mtb {
+  margin: 20px 0; }
+.my-jokes_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+.my-jokes_joke {
+  width: calc((100% / 3) - (10px * 2));
+  padding: 5px;
+  box-sizing: border-box;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
+  background-color: white;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+.my-jokes_joke:hover {
+  background-color: #fafafa; }
+
+@media screen and (max-width: 1200px) {
+  .my-jokes_content {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center; }
+  .my-jokes_joke {
+    width: 90%;
+    padding: 10px;
+    min-height: 300px; }
+    .my-jokes_joke p {
+      font-size: 20px; } }
+
+/*# sourceMappingURL=MyJokes.css.map */

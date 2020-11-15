@@ -1,0 +1,39 @@
+.button {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer; }
+  .button__primary {
+    background-color: rgba(255, 98, 98, 0.67);
+    color: #575757; }
+  .button__primary:hover {
+    background-color: #cecece; }
+  .button__primary:focus {
+    background-color: rgba(255, 98, 98, 0.67);
+    box-shadow: 0 0 0 1px #cecece; }
+  .button__primary:active {
+    background-color: rgba(199, 116, 116, 0.67); }
+  .button__secondary {
+    background-color: #04ff8c;
+    color: #7f3e3e; }
+  .button__secondary:hover {
+    background-color: #cecece; }
+  .button__secondary:focus {
+    background-color: #04ff8c;
+    box-shadow: 0 0 0 1px #cecece; }
+  .button__secondary:active {
+    background-color: rgba(180, 255, 183, 0.67); }
+  .button__info {
+    background-color: rgba(123, 176, 252, 0.67);
+    color: #575757; }
+  .button__info:hover {
+    background-color: #cecece; }
+  .button__info:focus {
+    background-color: rgba(123, 176, 252, 0.67);
+    box-shadow: 0 0 0 1px #cecece; }
+  .button__info:active {
+    background-color: rgba(161, 198, 253, 0.67); }
+
+.button, .button:hover, .button:focus, .button:active {
+  border-radius: 10px; }
+
+/*# sourceMappingURL=Button.css.map */
