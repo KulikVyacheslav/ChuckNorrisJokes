@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getJoke, selectJoke, addJoke, deleteJoke, selectMyJokes, selectMyJokesById, deleteJokeById} from "../../ducks";
+import {getJoke, selectJoke, addJoke, selectMyJokesById, deleteJokeById} from "../../ducks";
 import {Joke} from "../../components/Joke";
 import {JokesI, RootStateI} from "../../interfaces/interfaces";
 import {Button} from "../../UI/Button";
@@ -24,7 +24,7 @@ export const Jokes: React.FC<JokesProps> = () => {
 
     useEffect(() => {
         setToggleButtonFavorite(initialStateTBF)
-    }, [joke])
+    }, [joke, initialStateTBF])
 
     const handleStartGetJoke = useCallback((): void => {
         setToggleButtonTimer(true);
@@ -38,7 +38,7 @@ export const Jokes: React.FC<JokesProps> = () => {
         clearInterval(timerForJoke.current!);
     }, []);
 
-    const handleFavorite = (): void => {
+    const handleFavorite = useCallback((): void => {
         if (toggleButtonFavorite) {
             dispatch(deleteJokeById(joke.id));
             setToggleButtonFavorite(false);
@@ -47,7 +47,8 @@ export const Jokes: React.FC<JokesProps> = () => {
             setToggleButtonFavorite(true);
         }
 
-    }
+    }, [dispatch, joke, toggleButtonFavorite]);
+
     return (
         <div className="container jokes">
             <Joke />

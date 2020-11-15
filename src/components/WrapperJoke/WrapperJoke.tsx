@@ -1,4 +1,4 @@
-import React, {ElementType} from "react";
+import React, {useCallback} from "react";
 import {useDispatch} from "react-redux";
 import { deleteJokeById } from "../../ducks";
 import {Button} from "../../UI/Button";
@@ -13,9 +13,9 @@ export const WrapperJoke: React.FC<WrapperJokeProps> = ({children, idJoke, class
 
     const dispatch = useDispatch();
 
-    const handleDeleteJoke = (): void => {
+    const handleDeleteJoke = useCallback((): void => {
         dispatch(deleteJokeById(idJoke))
-    }
+    }, [dispatch, idJoke])
 
     return (
         <div className={className}>
