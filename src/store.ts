@@ -15,6 +15,7 @@ import {
     jokesReducer,
     myJokesReducer,
 } from './ducks';
+import {myJokesCheckCount} from "./middlewares/myJokesMiddleware";
 
 
 const persistConfig = {
@@ -32,11 +33,11 @@ const persistedReducer = persistReducer(persistConfig, combineReducers({
 export const store = configureStore({
     reducer: persistedReducer,
     devTools: process.env.NODE_ENV !== 'production',
-    middleware: getDefaultMiddleware({
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: {
             ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
         }
-    })
+    }).concat(myJokesCheckCount)
 });
 
 export let persistor = persistStore(store);

@@ -10,8 +10,10 @@
   "main": "src/index.tsx",
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
+    "@types/classnames": "^2.2.11",
     "@types/react-redux": "^7.1.11",
     "@types/react-router-dom": "^5.1.6",
+    "classnames": "^2.2.6",
     "react": "17.0.0",
     "react-dom": "17.0.0",
     "react-redux": "^7.2.2",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@types/react": "16.9.19",
     "@types/react-dom": "16.9.5",
+    "sass": "^1.29.0",
     "typescript": "3.7.5"
   },
   "scripts": {

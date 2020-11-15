@@ -1,0 +1,24 @@
+.joke {
+  max-width: 900px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  p {
+   font-size: 40px;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .joke {
+
+    p {
+      padding: 15px;
+      font-size: 20px;
+    }
+
+  }
+}

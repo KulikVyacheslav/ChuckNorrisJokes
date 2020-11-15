@@ -1,0 +1,19 @@
+.jokes {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .jokes_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .jokes_button button {
+      margin: 10px 10px; }
+
+@media screen and (max-width: 550px) {
+  .jokes_button {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center; } }
+
+/*# sourceMappingURL=Jokes.css.map */

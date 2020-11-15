@@ -1,0 +1,56 @@
+.button {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+
+  &__primary {
+    background-color: rgba(255, 98, 98, 0.67);
+    color: #575757;
+  }
+  &__primary:hover {
+    background-color: #cecece;
+  }
+  &__primary:focus {
+    background-color: rgba(255, 98, 98, 0.67);
+    box-shadow: 0 0 0 1px #cecece;
+  }
+  &__primary:active {
+    background-color: rgba(199, 116, 116, 0.67);
+  }
+
+
+  &__secondary {
+    background-color: rgb(4, 255, 140);
+    color: #7f3e3e;
+  }
+  &__secondary:hover {
+    background-color: #cecece;
+  }
+  &__secondary:focus {
+    background-color: rgb(4, 255, 140);
+    box-shadow: 0 0 0 1px #cecece;
+  }
+  &__secondary:active {
+    background-color: rgba(180, 255, 183, 0.67);
+  }
+
+  &__info {
+    background-color: rgba(123, 176, 252, 0.67);
+    color: #575757;
+  }
+  &__info:hover {
+    background-color: #cecece;
+  }
+  &__info:focus {
+    background-color: rgba(123, 176, 252, 0.67);
+    box-shadow: 0 0 0 1px #cecece;
+  }
+  &__info:active {
+    background-color: rgba(161, 198, 253, 0.67);
+  }
+}
+
+.button, .button:hover, .button:focus, .button:active   {
+  border-radius: 10px;
+}
+

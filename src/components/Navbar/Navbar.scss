@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  background-color: #cecece;
+  height: 50px;
+  padding: 0 10px;
+  margin: 0;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  &_logo {
+    width: 50px;
+  }
+
+  &_item {
+
+    a {
+      height: 100%;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+
+    }
+
+    a:active {
+      background-color: #727272;
+    }
+
+    &__active {
+      background-color: #979797;
+      color: white !important;
+    }
+  }
+
+
+  li:hover {
+    background-color: #575757;
+  }
+}
